@@ -56,3 +56,27 @@ form {
 #end-date::-webkit-calendar-picker-indicator {
     display: none;
 } 
+
+#event-local {
+    padding: 16px;
+    width: 272px;
+    height: 48px;
+    margin-top: -16px;
+}
+
+label.description {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+textarea#description {
+    width: 560px;
+    height: 136px;
+    border-radius: 8px;
+    border: 1px solid var(--input-stroke);
+    background-color: var(--input-base);
+    padding: 16px;
+    font: var(--text-md);
+    resize: none;
+}
