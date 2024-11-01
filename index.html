@@ -40,10 +40,20 @@
                             </div>
                         </div>
                         <div id="event-info-2">  
-                            <div>       
-                                <label for="event-type">Tipo</label>
-                                <input type="checkbox" id="event-type" name="presencial">
-                                <input type="checkbox" id="event-type" name="online">
+                            <div switch-container>   
+
+                                <input type="radio" name="attendance" id="in-person" value="in-person" class="switch-radio" checked>
+                                <input type="radio" name="attendance" id="online" name="online" value="online" class="switch-radio">
+
+                                <label for="in-person" class="switch-label in-person">
+                                    <span class="switch-option"><img src="./assets/icons/building-2.svg" alt="icone de predio">Presencial</span>
+                                </label>
+                                <label for="online" class="switch-label online">
+                                    <span class="switch-option"><img src="./assets/icons/video.svg" alt="icone de camera">Online</span>
+                                </label>
+
+                                <span class="toggle"></span>
+
                             </div> 
                             <div>  
                                 <label for="event-local">Local</label>

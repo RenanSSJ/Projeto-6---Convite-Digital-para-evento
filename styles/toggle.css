@@ -1,0 +1,12 @@
+.switch-radio {
+    display: none;
+}
+
+.switch-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 272px;
+    height: 48px;
+}
