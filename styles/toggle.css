@@ -1,12 +1,62 @@
+.switch-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: -16px;
+    border: 1px solid var(--input-stroke);
+    border-radius: 8px;
+    width: 272px;
+    height: 48px;
+    cursor: pointer;
+    border: 1px solid var(--input-stroke);
+}
+
 .switch-radio {
     display: none;
 }
 
-.switch-container {
+.switch-label {
     display: flex;
-    justify-content: center;
     align-items: center;
-    position: relative;
-    width: 272px;
-    height: 48px;
+    gap: 8px;
+    flex: 1;
+    justify-content: center;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
 }
+
+/* Estilo do ícone */
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Estilo do toggle */
+#toggle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 126px; 
+    height: calc(100% - 10px);
+    background-color: var(--shape-button);
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* Mover o toggle para a direita ao selecionar "online" */
+#online:checked ~ #toggle {
+    left: 138px; /* Ajuste para alinhar com a opção "online" */
+}
+
+/* Troca o ícone quando "in-person" está selecionado */
+#online:checked + .switch-label.in-person img {
+    content: url(../assets/icons/icones-hover/building-2.svg); 
+
+}
+
+/* Troca o ícone quando "online" está selecionado */
+#online:checked ~ .switch-label.online img {
+    content: url(../assets/icons/icones-hover/video.svg); 
+}
+
