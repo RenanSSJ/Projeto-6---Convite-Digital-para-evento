@@ -1,0 +1,37 @@
+body {
+    background-color: var(--shape-body);
+}
+
+#back {
+    display: grid;
+    grid-template-columns: 400px 820px;
+    background-color: var(--shape-background);
+    justify-self: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 1.3rem;
+    max-width: 1260px;
+    max-height: 768px;
+}
+
+main {
+    background-color: #1C1F21;
+    position: relative;
+    overflow: auto;
+
+    border-radius: 1.3rem;
+
+    margin-right: 20px;
+    padding: 80px 130px;
+
+    h1 {
+        margin-bottom: 40px;
+    }  
+
+}
+
+
+
+
+
+

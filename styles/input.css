@@ -1,0 +1,55 @@
+
+fieldset {
+    all: unset;
+    
+   legend {
+    display: inline-block;
+    margin-bottom: 24px;
+   }
+
+   label {
+    display: block;
+    margin-bottom: 12px;
+   }
+
+}
+input {
+
+    background-color: var(--input-base);
+    color: var(--input-placeholder);
+    font: var(--text-md);
+    border: 1px solid var(--input-stroke);
+    border-radius: 8px;
+    padding: 0px 16px;
+}
+form {
+    input#event-name {
+        width: 560px;
+        height: 48px;
+    }
+}
+
+#event-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 16px;
+
+    & input {
+        width: 272px;
+        height: 48px;
+        text-transform: uppercase;
+    }
+}
+
+#event-info-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 16px;
+}
+
+#start-date::-webkit-calendar-picker-indicator , 
+#end-date::-webkit-calendar-picker-indicator {
+    display: none;
+} 

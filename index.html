@@ -1,29 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <title>Formulário de convite</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite</title>
     <link rel="stylesheet" href="styles/index.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    
-    
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+</head>
 <body>
-    <main>
-        <div class="main-container">
-            main
-        </div>
-    </main>
-    <aside>
-        <div class="main-container">
-            aside
-        </div>
-    </aside>
+    <div id="back">
+        <aside>
+           <div class="aside-container">
+            <img src="./assets/Brand.png" alt="imagem de um bolo colorido de aniversario">
+           </div> 
+        </aside>
+        <main>
+            <div class="main-container">
+                <h1>Crie Seu Convite</h1>
+
+                <fieldset>
+                    <legend><h2>Sobre o evento</h2></legend>
+
+                    <form action="#">
+                        <label for="event-name">Titulo</label>
+                        <input type="text" name="event-name" id="event-name" placeholder="Nome do evento">
+
+                        <div id="event-info">
+                            <div>
+                                <label for="start-date">Início</label>
+                                <input type="datetime-local" name="start-date" id="start-date">
+                            </div>
+                            <div>
+                                <label for="end-date">Fim</label>
+                                <input type="datetime-local" name="end-date" id="end-date">
+                            </div>
+                        </div>
+                        <div id="event-info-2">  
+                            <div>       
+                                <label for="event-type">Tipo</label>
+                                <input type="checkbox" id="event-type" name="presencial">
+                                <input type="checkbox" id="event-type" name="online">
+                            </div> 
+                            <div>  
+                                <label for="event-local">Local</label>
+                                <input type="text" id="event-local" name="event-local">
+                            </div>   
+                        </div>
+                    </form>
+                </fieldset>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
