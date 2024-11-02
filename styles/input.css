@@ -1,23 +1,5 @@
-
-fieldset {
-    all: unset;
-    
-   legend {
-    display: inline-block;
-    margin-bottom: 24px;
-   }
-
-   label {
-    display: flex;
-    margin-bottom: 12px;
-    margin-top: 16px;
-    justify-self: left;
-    align-items: center;
-   }
-
-}
 input {
-
+    cursor: pointer;
     background-color: var(--input-base);
     color: var(--input-placeholder);
     font: var(--text-md);
@@ -79,4 +61,5 @@ textarea#description {
     padding: 16px;
     font: var(--text-md);
     resize: none;
+    cursor: pointer;
 }
