@@ -56,6 +56,9 @@ fieldset {
 
 body {
     overflow: hidden;
+    background-color: var(--shape-body);
+    padding-top: 10px;
+    
 }
 
 h1 {

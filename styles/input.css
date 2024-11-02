@@ -6,7 +6,16 @@ input {
     border: 1px solid var(--input-stroke);
     border-radius: 8px;
     padding: 0px 16px;
+
 }
+
+input:focus {
+    outline: none;
+    border-color: var(--brand-light) ;
+}
+
+
+
 form {
     input#event-name {
         width: 560px;
@@ -62,4 +71,65 @@ textarea#description {
     font: var(--text-md);
     resize: none;
     cursor: pointer;
+}
+
+textarea#description:focus {
+    outline: none;
+    border-color: var(--brand-light);
+  
+}
+
+input[type="radio"] {
+    appearance: none; /* Remove o estilo padrão */
+    width: 20px;
+    height: 35px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    
+    cursor: pointer;
+
+    box-shadow: 0 0 3px 5px var(--shape-button);
+
+    &#light-blue {
+        background-color: var(--brand-light);
+    }
+    &#navy {
+        background-color: var(--navy);
+    }
+    &#purple {
+        background-color: var(--purple);
+    }
+    &#fuschia {
+        background-color: var(--fuschia);
+    }
+    &#pink {
+        background-color: var(--pink);
+    }
+    &#danger {
+        background-color: var(--danger);
+    }
+    &#orange {
+        background-color: var(--orange);
+    }
+    &#yellow {
+        background-color: var(--yellow);
+    }
+    &#lime {
+        background-color: var(--lime);
+    }
+    &#green {
+        background-color: var(--green);
+    }
+    &#cyan {
+        background-color: var(--cyan);
+    }
+}
+
+input[type="radio"]:hover {
+    box-shadow: 0 0 3px 5px var(--shape-hover);
+}
+
+input[type="radio"]:focus {
+    outline: none;
+    border-color: var(--brand-light);
 }
