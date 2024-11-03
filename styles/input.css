@@ -127,9 +127,11 @@ input[type="radio"] {
 
 input[type="radio"]:hover {
     box-shadow: 0 0 3px 5px var(--shape-hover);
+    transform: scale(1.1);
 }
 
 input[type="radio"]:focus {
-    outline: none;
-    border-color: var(--brand-light);
+
+    outline: 2px solid var(--brand-light);
+    outline-offset: 5px;
 }
