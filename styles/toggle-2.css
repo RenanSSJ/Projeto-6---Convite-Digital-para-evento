@@ -1,0 +1,64 @@
+input[type="checkbox"]#toggle-2 {
+   
+    cursor: pointer;
+}
+
+input[type="checkbox"]#toggle-2 + label {
+    display: flex;
+    gap: 12px;
+    font: var(--text-sm);
+    align-items: center;
+
+    position: relative;
+}
+
+
+input[type="checkbox"]#toggle-2 + label::before {
+    content: "";
+    width: 64px;
+    height: 32px;
+    background-color: var(--input-base);
+
+    border: 1px solid var(--input-stroke);
+    border-radius: 20px;
+}
+
+input[type="checkbox"]#toggle-2 + label::after {
+    content: "";
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: var(--input-stroke);
+    border-radius: 20px;
+    position: absolute;
+    transition: left 0.45s;
+}
+
+input[type="checkbox"]#toggle-2:checked + label::after {
+    left: 36px;
+    background-color: white;
+}
+
+input[type="checkbox"]#toggle-2:checked + label::before {
+    background-color: var(--brand-light);
+
+}
+
+
+/* Controla a visibilidade do texto */
+.text-off {
+    display: inline; 
+}
+
+.text-on {
+    display: none; 
+}
+
+/* Alterna a visibilidade ao marcar o checkbox */
+input[type="checkbox"]#toggle-2:checked + label .text-off {
+    display: none; 
+}
+
+input[type="checkbox"]#toggle-2:checked + label .text-on {
+    display: inline; 
+}

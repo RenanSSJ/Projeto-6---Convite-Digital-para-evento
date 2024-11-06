@@ -66,6 +66,11 @@ fieldset {
     margin-top: 22px;
  }
 
+ #theme-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+ }
+
 
 
 

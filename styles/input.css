@@ -135,3 +135,9 @@ input[type="radio"]:focus {
     outline: 2px solid var(--brand-light);
     outline-offset: 5px;
 }
+
+label.event-theme {
+    margin-top: 28px;
+    margin-bottom: -2px;
+}
+
