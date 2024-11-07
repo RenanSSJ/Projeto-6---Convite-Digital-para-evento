@@ -1,8 +1,15 @@
+body {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center;     /* Alinha verticalmente */
+    height: 100vh;           /* Garantir que o body tenha altura total */
+    margin: 0;               /* Remove as margens padrão */
+}
+
 #back {
     display: grid;
     grid-template-columns: 400px 820px;
     background-color: var(--shape-background);
-    justify-self: center;
     gap: 20px;
     padding: 20px;
     border-radius: 1.3rem;
