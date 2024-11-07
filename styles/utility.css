@@ -1,4 +1,26 @@
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;   
+    gap: 16px;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--danger);
+    font: var(--text-sm);
+    margin-top: 0.5rem;
+}
+
+input:valid + .error {
+    display: none;
+}
+
+input:invalid {
+   border-color: var(--danger);
+  }
+
+.blue {
+    color: var(--brand-light);
 }

@@ -8,11 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Convite</title>
     <link rel="stylesheet" href="styles/index.css">
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Leckerli+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -25,13 +21,13 @@
         <main>
             <div id="wrapper">
                 <h1>Crie Seu Convite</h1>
+                <form action="#">
+                    <fieldset id="about-event" class="about-event">
+                        <legend>
+                            <img src="./assets/icons/calendar.svg" alt="icone de calendario">
+                            <h2>Sobre o evento</h2>
+                        </legend>
 
-                <fieldset id="about-event" class="about-event">
-                    <legend><img src="./assets/icons/calendar.svg" alt="icone de calendario">
-                        <h2>Sobre o evento</h2>
-                    </legend>
-
-                    <form action="#">
                         <label for="event-name">Titulo</label>
                         <input type="text" name="event-name" id="event-name" placeholder="Nome do evento">
 
@@ -50,167 +46,211 @@
                             <label for="attendance">Tipo</label>
                             <label for="event-local">Local</label>
                             <div class="switch-container">
-                                <input type="radio" name="attendance" id="in-person" value="in-person"
-                                    class="switch-radio" checked>
+                                <input type="radio" name="attendance" id="in-person" value="in-person" class="switch-radio" checked>
                                 <input type="radio" name="attendance" id="online" value="online" class="switch-radio">
 
                                 <label for="in-person" class="switch-label in-person">
-                                    <span class="icon-wrapper"><img src="./assets/icons/building-2.svg"
-                                            alt="icone de prédio" class="icon"></span>
+                                    <span class="icon-wrapper">
+                                        <img src="./assets/icons/building-2.svg" alt="icone de prédio" class="icon">
+                                    </span>
                                     Presencial
                                 </label>
                                 <label for="online" class="switch-label online">
-                                    <span class="icon-wrapper"><img src="./assets/icons/video.svg" alt="icone de câmera"
-                                            class="icon"></span>
+                                    <span class="icon-wrapper">
+                                        <img src="./assets/icons/video.svg" alt="icone de câmera" class="icon">
+                                    </span>
                                     Online
                                 </label>
-
                                 <span id="toggle"></span>
                             </div>
                             <input type="text" id="event-local" name="event-local" placeholder="Link ou endereço">
                         </div>
-            </div>
-            <label for="description" class="description">Descrição</label>
-            <textarea name="description" id="description" placeholder="Escreva sobre os detalhes do evento"></textarea>
-            </form>
-            </fieldset>
+                        <label for="description" class="description">Descrição</label>
+                        <textarea name="description" id="description" placeholder="Escreva sobre os detalhes do evento"></textarea>
+                    </fieldset>
 
-            <fieldset>
-                <form>
-                    <legend><img src="./assets/icons/paintbrush-vertical.svg" alt="">
-                        <h2>Personalização</h2>
-                    </legend>
-                    <label for="color-picker">Cor principal</label>
-                    <div id="color-wrapper">
-                        <input type="radio" name="color-picker" id="light-blue">
-                        <input type="radio" name="color-picker" id="navy">
-                        <input type="radio" name="color-picker" id="purple">
-                        <input type="radio" name="color-picker" id="fuschia">
-                        <input type="radio" name="color-picker" id="pink">
-                        <input type="radio" name="color-picker" id="danger">
-                        <input type="radio" name="color-picker" id="orange">
-                        <input type="radio" name="color-picker" id="yellow">
-                        <input type="radio" name="color-picker" id="lime">
-                        <input type="radio" name="color-picker" id="green">
-                        <input type="radio" name="color-picker" id="cyan">
-                    </div>
+                    <fieldset>
+                        <legend>
+                            <img src="./assets/icons/paintbrush-vertical.svg" alt="">
+                            <h2>Personalização</h2>
+                        </legend>
 
-                    <label for="event-theme" class="event-theme">Tema do evento</label>
-                    <div id="theme-wrapper">
+                        <label for="color-picker">Cor principal</label>
+                        <div id="color-wrapper">
+                            <input type="radio" name="color-picker" id="light-blue">
+                            <input type="radio" name="color-picker" id="navy">
+                            <input type="radio" name="color-picker" id="purple">
+                            <input type="radio" name="color-picker" id="fuschia">
+                            <input type="radio" name="color-picker" id="pink">
+                            <input type="radio" name="color-picker" id="danger">
+                            <input type="radio" name="color-picker" id="orange">
+                            <input type="radio" name="color-picker" id="yellow">
+                            <input type="radio" name="color-picker" id="lime">
+                            <input type="radio" name="color-picker" id="green">
+                            <input type="radio" name="color-picker" id="cyan">
+                        </div>
 
+                        <label for="event-theme" class="event-theme">Tema do evento</label>
+                        <div id="theme-wrapper">
+                            <input type="checkbox" name="event-theme" id="birthday">
+                            <label for="birthday" class="card">
+                                <img src="./assets/images/birthday.png" alt="Imagem de aniversario">
+                                <span>Aniversário</span>
+                            </label>
 
-                        <input type="checkbox" name="event-theme" id="birthday">
-                        <label for="birthday" class="card">
-                            <img src="./assets/images/birthday.png" alt="Imagem de aniversario">
-                            <span>Aniversário</span>
-                        </label>
+                            <input type="checkbox" name="event-theme" id="kids">
+                            <label for="kids" class="card">
+                                <img src="./assets/images/kids.png" alt="Imagem de Decoraçao para crianças">
+                                <span>Infantil</span>
+                            </label>
 
-                        <input type="checkbox" name="event-theme" id="kids">
-                        <label for="kids" class="card">
-                            <img src="./assets/images/kids.png" alt="Imagem de Decoraçao para crianças">
-                            <span>Infantil</span>
-                        </label>
+                            <input type="checkbox" name="event-theme" id="graduation">
+                            <label for="graduation" class="card">
+                                <img src="./assets/images/graduation.png" alt="Imagem de formatura">
+                                <span>Formatura</span>
+                            </label>
 
-                        <input type="checkbox" name="event-theme" id="graduation">
-                        <label for="graduation" class="card">
-                            <img src="./assets/images/graduation.png" alt="Imagem de formatura">
-                            <span>Formatura</span>
-                        </label>
-                        
-                        <input type="checkbox" name="event-theme" id="wedding">
-                        <label for="wedding" class="card">
-                            <img src="./assets/images/wedding.png" alt="Imagem de formatura">
-                            <span>Casamento</span>
-                        </label>
+                            <input type="checkbox" name="event-theme" id="wedding">
+                            <label for="wedding" class="card">
+                                <img src="./assets/images/wedding.png" alt="Imagem de formatura">
+                                <span>Casamento</span>
+                            </label>
 
-                        <input type="checkbox" name="event-theme" id="baby-shower">
-                        <label for="baby-shower" class="card">
-                            <img src="./assets/images/baby-shower.png" alt="Imagem de Cha de bebe">
-                            <span>Chá de bebê</span>
-                        </label>
-                        
-                        <input type="checkbox" name="event-theme" id="brindal-shower">
-                        <label for="brindal-shower" class="card">
-                            <img src="./assets/images/brindal-shower.png" alt="Imagem de Cha de panela">
-                            <span>Chá de panela</span>
-                        </label>
+                            <input type="checkbox" name="event-theme" id="baby-shower">
+                            <label for="baby-shower" class="card">
+                                <img src="./assets/images/baby-shower.png" alt="Imagem de Cha de bebe">
+                                <span>Chá de bebê</span>
+                            </label>
 
-                        <input type="checkbox" name="event-theme" id="carnival">
-                        <label for="carnival" class="card">
-                            <img src="./assets/images/carnival.png" alt="Imagem de Carnaval">
-                            <span>Carnaval</span>
-                        </label>
+                            <input type="checkbox" name="event-theme" id="brindal-shower">
+                            <label for="brindal-shower" class="card">
+                                <img src="./assets/images/brindal-shower.png" alt="Imagem de Cha de panela">
+                                <span>Chá de panela</span>
+                            </label>
 
-                        <input type="checkbox" name="event-theme" id="eastern">
-                        <label for="eastern" class="card">
-                            <img src="./assets/images/eastern.png" alt="Imagem de Pascoa">
-                            <span>Carnaval</span>
-                        </label>
+                            <input type="checkbox" name="event-theme" id="carnival">
+                            <label for="carnival" class="card">
+                                <img src="./assets/images/carnival.png" alt="Imagem de Carnaval">
+                                <span>Carnaval</span>
+                            </label>
 
-                        <input type="checkbox" name="event-theme" id="saint-jhons">
-                        <label for="saint-jhons" class="card">
-                            <img src="./assets/images/saint-jhons.png" alt="Imagem de São João">
-                            <span>São João</span>
-                        </label>
+                            <input type="checkbox" name="event-theme" id="eastern">
+                            <label for="eastern" class="card">
+                                <img src="./assets/images/eastern.png" alt="Imagem de Pascoa">
+                                <span>Carnaval</span>
+                            </label>
 
-                        <input type="checkbox" name="event-theme" id="Halloween">
-                        <label for="Halloween" class="card">
-                            <img src="./assets/images/halloween.png" alt="Imagem de Halloween">
-                            <span>Halloween</span>
-                        </label>
+                            <input type="checkbox" name="event-theme" id="saint-jhons">
+                            <label for="saint-jhons" class="card">
+                                <img src="./assets/images/saint-jhons.png" alt="Imagem de São João">
+                                <span>São João</span>
+                            </label>
 
-                        <input type="checkbox" name="event-theme" id="christimas">
-                        <label for="christimas" class="card">
-                            <img src="./assets/images/christimas.png" alt="Imagem de Natal">
-                            <span>Natal</span>
-                        </label>
+                            <input type="checkbox" name="event-theme" id="Halloween">
+                            <label for="Halloween" class="card">
+                                <img src="./assets/images/halloween.png" alt="Imagem de Halloween">
+                                <span>Halloween</span>
+                            </label>
 
-                        <input type="checkbox" name="event-theme" id="others">
-                        <label for="others" class="card">
-                            <img src="./assets/images/other.png" alt="Imagem de grupo de pessoas">
-                            <span>Outros</span>
-                        </label>
-                    </div>
-                    
-                    <div class="grid-2">
-                        <div>
-                        <Label id="style-label">Estilo</Label>
-                         <input type="checkbox" id="toggle-2" class="toggle-2"></input>
-                            <label for="toggle-2" id="label-toggle-2">
-                                <span class="text-off">Escuro</span>
-                                <span class="text-on">Claro</span>
+                            <input type="checkbox" name="event-theme" id="christimas">
+                            <label for="christimas" class="card">
+                                <img src="./assets/images/christimas.png" alt="Imagem de Natal">
+                                <span>Natal</span>
+                            </label>
+
+                            <input type="checkbox" name="event-theme" id="others">
+                            <label for="others" class="card">
+                                <img src="./assets/images/other.png" alt="Imagem de grupo de pessoas">
+                                <span>Outros</span>
                             </label>
                         </div>
-                        <div id="file-upload-container">
-                            <label>Foto de capa</label>
-                            <input type="file" name="cover-file" id="cover-file">
-                            
-                            <div id="upload-button-container">
-                                <label for="cover-file" id="label-file">
-                                    <img src="./assets/icons/upload.svg" alt="">Selecionar
+
+                        <div class="grid-2">
+                            <div>
+                                <label id="style-label">Estilo</label>
+                                <input type="checkbox" id="toggle-2" class="toggle-2">
+                                <label for="toggle-2" id="label-toggle-2">
+                                    <span class="text-off">Escuro</span>
+                                    <span class="text-on">Claro</span>
                                 </label>
-                                <span id="file-name">Nenhum arquivo selecionado.</span>
+                            </div>
+                            <div id="file-upload-container">
+                                <label>Foto de capa</label>
+                                <input type="file" name="cover-file" id="cover-file">
+
+                                <div id="upload-button-container">
+                                    <label for="cover-file" id="label-file">
+                                        <img src="./assets/icons/upload.svg" alt="">Selecionar
+                                    </label>
+                                    <span id="file-name">Nenhum arquivo selecionado.</span>
+                                </div>
                             </div>
                         </div>
+                    </fieldset>
 
-                        <script>
-                            document.getElementById("cover-file").addEventListener("change", function() {
-                                const fileNameSpan = document.getElementById("file-name");
-                                
-                                if (this.files.length > 0) {
-                                    fileNameSpan.textContent = this.files[0].name; 
-                                } else {
-                                    fileNameSpan.textContent = "Nenhum arquivo selecionado."; // 
-                                }
-                            });
-                        </script>
-                    </div>
+                    <fieldset>
+                        <legend>
+                            <img src="./assets/icons/contact.svg" alt="">
+                            <h2>Dados para contato</h2>
+                        </legend>
+
+                        <input type="text" name="contact-name" id="contact-name" placeholder="Nome Completo" class="input-big" required>
+                        <span class="error"><img src="./assets/icons/circle-alert.svg" alt="icone de alerta">Campo obrigatório</span>
+
+                        <div class="grid-2">
+                            <div>
+                                <label for="email">E-mail</label>
+                                <input type="email" placeholder="exemplo@email.com" class="input-small">
+                            </div>
+                            <div>
+                                <label for="phone">Telefone</label>
+                                <input type="tel" placeholder="(99) 99999-9999" class="input-small">
+                            </div>
+
+                        </div>
+
+                    </fieldset>
+
+                    <fieldset class="terms">
+                        <input type="checkbox" id="terms-conditions" class="custom-checkbox" checked>
+                        <label for="terms-conditions">
+                        <img src="./assets/icons/checkbox.svg" alt="" class="unchecked"> 
+                        <img src="./assets/icons/checked.svg" alt="" class="checked"> 
+                            <p>Li e concordo com os <span class="blue">Termos e Condições</span> e com a <span class="blue">Política de Privacidade</span></p>
+                        </label>
+
+                        <input type="checkbox" id="email-signup" class="custom-checkbox">
+                        <label for="email-signup">
+                        <img src="./assets/icons/checkbox.svg" alt="" class="unchecked"> 
+                        <img src="./assets/icons/checked.svg" alt="" class="checked"> 
+                            <p>Aceito receber atualizações e promoções por e-mail</p>
+                        </label>
+
+                        <input type="checkbox" id="sms-signup" class="custom-checkbox">
+                        <label for="sms-signup">
+                        <img src="./assets/icons/checkbox.svg" alt="" class="unchecked"> 
+                        <img src="./assets/icons/checked.svg" alt="" class="checked"> 
+                            <p>Aceito receber atualizações e promoções por SMS</p>
+                        </label>
+                    </fieldset>
                 </form>
-            </fieldset>
+            </div>
+        </main>
+    </div>
 
-    </div>
-    </main>
-    </div>
+    <script>
+        document.getElementById("cover-file").addEventListener("change", function () {
+            const fileNameSpan = document.getElementById("file-name");
+
+            if (this.files.length > 0) {
+                fileNameSpan.textContent = this.files[0].name;
+           
+
+            } else {
+                fileNameSpan.textContent = "Nenhum arquivo selecionado."; // 
+            }
+        });
+    </script>
 </body>
 
 </html>
