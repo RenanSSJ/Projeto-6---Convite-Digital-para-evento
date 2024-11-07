@@ -174,17 +174,36 @@
                     
                     <div class="grid-2">
                         <div>
-                        <Label>Estilo</Label>
+                        <Label id="style-label">Estilo</Label>
                          <input type="checkbox" id="toggle-2" class="toggle-2"></input>
                             <label for="toggle-2" id="label-toggle-2">
                                 <span class="text-off">Escuro</span>
                                 <span class="text-on">Claro</span>
                             </label>
                         </div>
-                        <div>
-                            <label for="cover-file">Foto de capa</label>
+                        <div id="file-upload-container">
+                            <label>Foto de capa</label>
                             <input type="file" name="cover-file" id="cover-file">
+                            
+                            <div id="upload-button-container">
+                                <label for="cover-file" id="label-file">
+                                    <img src="./assets/icons/upload.svg" alt="">Selecionar
+                                </label>
+                                <span id="file-name">Nenhum arquivo selecionado.</span>
+                            </div>
                         </div>
+
+                        <script>
+                            document.getElementById("cover-file").addEventListener("change", function() {
+                                const fileNameSpan = document.getElementById("file-name");
+                                
+                                if (this.files.length > 0) {
+                                    fileNameSpan.textContent = this.files[0].name; 
+                                } else {
+                                    fileNameSpan.textContent = "Nenhum arquivo selecionado."; // 
+                                }
+                            });
+                        </script>
                     </div>
                 </form>
             </fieldset>

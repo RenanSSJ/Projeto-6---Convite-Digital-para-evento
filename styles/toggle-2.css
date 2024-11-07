@@ -8,10 +8,12 @@ input[type="checkbox"]#toggle-2 + label {
     gap: 12px;
     font: var(--text-sm);
     align-items: center;
-
     position: relative;
 }
 
+#style-label {
+    margin-bottom: 18px;
+}
 
 input[type="checkbox"]#toggle-2 + label::before {
     content: "";

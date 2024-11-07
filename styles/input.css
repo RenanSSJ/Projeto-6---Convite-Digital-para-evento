@@ -141,3 +141,50 @@ label.event-theme {
     margin-bottom: -2px;
 }
 
+/* file-upload */
+
+#file-upload-container {
+    display: flex;
+    flex-direction: column; 
+    gap: 8px; 
+}
+
+#upload-button-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+#cover-file {
+    display: none;
+}
+
+#label-file {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0px;
+    width: 119px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: var(--text-heading);
+    background-color: var(--input-stroke);
+    padding-left: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#file-name {
+    font: var(--text-md);
+    font-size: 0.875rem;
+    color: var(--input-placeholder);
+    white-space: nowrap; 
+    padding-bottom: 13px;
+}
+
+#label-file:hover {
+    background-color: var(--shape-hover);
+}
+
